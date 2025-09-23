@@ -20,11 +20,12 @@ def main():
                 model='gemini-2.0-flash-001', contents=messages
                 )
     if len(args)>2:
-        if args[2] == "--verbose":
-            print(f"User prompt: {user_prompt}")
-            print("Prompt tokens:",response.usage_metadata.prompt_token_count)
-            print("Response tokens:",response.usage_metadata.candidates_token_count)
+        if "--verbose" in args:
+            print(f"User prompt: {user_prompt}\n")
+            print(f"Prompt tokens: {response.usage_metadata.prompt_token_count}\n")
+            print(f"Response tokens: {response.usage_metadata.candidates_token_count}\n")
+    print("==============RESPONSE===============")
     print(response.text)
-    
+    print("=====================================")
 if __name__ == "__main__":
     main()
