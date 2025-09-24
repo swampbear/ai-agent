@@ -1,20 +1,13 @@
 from functions.get_files_info import get_files_info
 
-err = get_files_info("calculator", ".")
+result = get_files_info("calculator", ".")
+print(result)
 
-if err != None:
-    print(err)
+result = get_files_info("calculator", "pkg")
+print(result)
 
-err = get_files_info("calculator", "pkg")
-if err != None:
-    print(err)
+result = get_files_info("calculator", "/bin")
+print(result)
 
-err = get_files_info("calculator", "/bin")
-
-if err != None:
-    print(err)
-
-err_slash = get_files_info("calculator","../")
-
-if err_slash != None:
-    print(err_slash)
+result = get_files_info("calculator","../")
+print(result)
