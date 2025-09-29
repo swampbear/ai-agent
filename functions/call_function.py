@@ -1,4 +1,3 @@
-from types import FrameType
 from google.genai import types
 from functions.get_file_content import get_file_content
 from functions.get_files_info import get_files_info
