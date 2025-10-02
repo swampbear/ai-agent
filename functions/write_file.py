@@ -1,7 +1,7 @@
 import os
 from google.genai import types
 
-schena_write_file = types.FunctionDeclaration(
+schema_write_file = types.FunctionDeclaration(
     name="write_file",
     description="Makes it possible to write to new or existing python files constrained to the working directory",
     parameters=types.Schema(
